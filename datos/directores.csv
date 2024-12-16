@@ -1,0 +1,275 @@
+,id_director,nombre
+0,0,Jürgen Böttcher
+1,1,Egon Günther
+2,2,Zdenek Tyc
+3,3,Arch Oboler
+4,4,Lindsay Shonteff
+5,5,Michael Rubbo
+6,6,Férid Boughedir
+7,7,Fernando Durán Rojas
+8,8,Cheh Chang
+9,9,Roger DuchownyJoel Silberg
+10,10,Tom Clegg
+11,11,Kevin Conway
+12,12,Yeung-Wah Kam
+13,13,Addison Randall
+14,14,Kei-Yee Chik
+15,15,Abbas Alibhai BurmawallaMastan Alibhai Burmawalla
+16,16,Valeriy Ogorodnikov
+17,17,Vyacheslav Nikiforov
+18,18,Marc Didden
+19,19,Petar Krelja
+20,20,Eda Lishman
+21,21,Zdenek Kaloc
+22,22,Katrin Ottarsdóttir
+23,23,Jacob Berger
+24,24,Gary Graver
+25,25,Steven Paul
+26,26,Jörg Graser
+27,27,Anthony Spinelli
+28,28,György Szomjas
+29,29,Jorge Grau
+30,30,Petr Koliha
+31,31,Pere Portabella
+32,32,Sulambek Mamilov
+33,33,Radoslaw Piwowarski
+34,34,Éric Rohmer
+35,35,Savva Kulish
+36,36,Filip Bajon
+37,37,Iosif Kheifits
+38,38,János Zsombolyai
+39,39,Eddie Beverly Jr.
+40,40,Jan Schütte
+41,41,Parkman Wong
+42,42,Joe D'Amato
+43,43,José Buil
+44,44,Kari Paljakka
+45,45,Krzysztof Kieslowski
+46,46,Tracey Moffatt
+47,47,Danièle HuilletJean-Marie Straub
+48,48,Arnaldo Jabor
+49,49,Olivier Gérard
+50,50,Joaquim Leitão
+51,51,Francisco J. Lombardi
+52,52,Richard Kern
+53,53,Andrés Sáenz de Heredia
+54,54,Jessie Nelson
+55,55,Björn Runge
+56,56,Joram Lürsen
+57,57,Igor Kovalyov
+58,58,Dito Tsintsadze
+59,59,Tom Tykwer
+60,60,Nicholas Franghias
+61,61,Rachel Galligan
+62,62,François Ozon
+63,63,Ivan Cardoso
+64,64,Juliusz Machulski
+65,65,David Wu
+66,66,Álvaro Sáenz de Heredia
+67,67,Howard Ziehm
+68,68,Sergey Solovyov
+69,69,Feliks Falk
+70,70,Robert Kaylor
+71,71,Mariano Ozores
+72,72,Albert Pyun
+73,73,Johnnie To
+74,74,Daniele Luchetti
+75,75,Clifton Ko
+76,76,Kent Cheng
+77,77,Chuck Vincent
+78,78,Philippe Clair
+79,79,Tonino Cervi
+80,80,Leonid Gaidai
+81,81,Detlev Buck
+82,82,Joy Fleury
+83,83,Regner Grasten
+84,84,Wei Tung
+85,85,Otakar Votocek
+86,86,José María Carreño
+87,87,Louis Malle
+88,88,Ernest G. Sauer
+89,89,Fabrice Cazeneuve
+90,90,Viktor Titov
+91,91,Aki Kaurismäki
+92,92,Federico Fellini
+93,93,Antonio Monda
+94,94,Krzysztof Magowski
+95,95,Morten Lorentzen
+96,96,Lina Wertmüller
+97,97,Pamela Berger
+98,98,Jan Kounen
+99,99,Charlie Wiener
+100,100,Frank MarshallRob Minkoff
+101,101,Bruno Bozzetto
+102,102,Bob Sabiston
+103,103,Mark Hartley
+104,104,Mathieu Kassovitz
+105,105,Darrell Van Citters
+106,106,Brett Ratner
+107,107,Kevin S. O'Brien
+108,108,Martin Barry
+109,109,Minoru Okazaki
+110,110,Santiago AguilarRaúl BarbéLuis Guridi
+111,111,Harry Sinclair
+112,112,John Weldon
+113,113,Craig Bartlett
+114,114,John Bell
+115,115,Andrew Garrison
+116,116,Alain Guiraudie
+117,117,Randall Miller
+118,118,Gregory P. Grant
+119,119,Stig BergqvistMartti EkstrandJonas Odell
+120,120,Al GuestJean Mathieson
+121,121,Klaus KnoeselHolger Neuhäuser
+122,122,Donyo Donev
+123,123,Flavia Moraes
+124,124,Candy Guard
+125,125,José Ángel Bohollo
+126,126,Maksim Pezhemskiy
+127,127,John Schnall
+128,128,John Kricfalusi
+129,129,Phil Morrison
+130,130,Chuen-Yee Cha
+131,131,Joseph Merhi
+132,132,Bong Luk
+133,133,Bill Milling
+134,134,Frankie Chan
+135,135,Eric Tsang
+136,136,Antonio Gonzalo
+137,137,Bruce McFarlane
+138,138,Jon Hess
+139,139,Aleksandr Muratov
+140,140,Tim Spring
+141,141,Gustav Ehmck
+142,142,Adrian Carr
+143,143,Josh Spencer
+144,144,Im Kwon-taek
+145,145,Alberto Isaac
+146,146,Raj N. Sippy
+147,147,Cedric Sundstrom
+148,148,Andrew Prowse
+149,149,Teddy Page
+150,150,Wellson ChinShan Hua
+151,151,Sze-Yu Lau
+152,152,Corey Yuen
+153,153,Aaron Norris
+154,154,Henrik Peschel
+155,155,Kiyoshi Murayama
+156,156,Wong Chun
+157,157,Jordi Amorós
+158,158,Alejandro Jodorowsky
+159,159,Staffan Götestam
+160,160,Warren A. Stevens
+161,161,Raúl Ruiz
+162,162,Wolfgang Urchs
+163,163,Kuen Yeung
+164,164,Stanislav Párnicky
+165,165,Roger Cantin
+166,166,Siu-Tung Ching
+167,167,Michael Rissi
+168,168,Michael Pattinson
+169,169,Min Kan Ng
+170,170,Ngai Choi LamSze-Yu Lau
+171,171,Gulzar
+172,172,Tizuka Yamasaki
+173,173,Michael Raeburn
+174,174,Cyril Frankel
+175,175,Robert David
+176,176,Edgar Pêra
+177,177,Anatoliy Petrov
+178,178,Adolf BornJaroslav Doubrava
+179,179,Boris Akulinichev
+180,180,Alec Mills
+181,181,Somtow Sucharitkul
+182,182,Raffaele DonatoJoe D'Amato
+183,183,Jörg Buttgereit
+184,184,Lucio Fulci
+185,185,Christoph Schlingensief
+186,186,Marek Piestrak
+187,187,V.V. Dachin HsuMichael W. Leighton
+188,188,Tony Elwood
+189,189,James Bond III
+190,190,Eric Marciano
+191,191,Charles Philip Moore
+192,192,Fyodor Petrukhin
+193,193,Fred Olen Ray
+194,194,J.S. Cardone
+195,195,Steve Barkett
+196,196,Malcolm Marmorstein
+197,197,Ross HagenJohn Stewart
+198,198,Wayne Coe
+199,199,Cliff Guest
+200,200,Paul Hart-Wilden
+201,201,Lincoln Kupchak
+202,202,Álex de la Iglesia
+203,203,Marc Recha
+204,204,Dinko Tucakovic
+205,205,Eric D. Wilkinson
+206,206,Jeff Kahn
+207,207,Graeme Campbell
+208,208,Anthony J. Christopher
+209,209,Lorenzo Onorati
+210,210,Bruno Gamulin
+211,211,F.J. Ossang
+212,212,Greydon Clark
+213,213,András Monory Mész
+214,214,Christopher Rawlence
+215,215,Larry Brand
+216,216,Claude Chabrol
+217,217,Vince Martin
+218,218,Lino Brocka
+219,219,James Keach
+220,220,Rockne S. O'Bannon
+221,221,Jim Kaufman
+222,222,Barbet Schroeder
+223,223,Zinoviy Royzman
+224,224,Boris Grigorev
+225,225,Patricia Gruben
+226,226,Wings Hauser
+227,227,Aleksey Korenev
+228,228,Peter Lehner
+229,229,Mikael Dovlatyan
+230,230,Yuen Chor
+231,231,Galina Shigayeva
+232,232,Douglas Jackson
+233,233,Nacho CerdáEthan JacobsonFrancisco Stohr
+234,234,Mario Kamberg
+235,235,Aleksei Lebedev
+236,236,Philippe Faucon
+237,237,Adoor Gopalakrishnan
+238,238,Marc Huestis
+239,239,Mariusz Trelinski
+240,240,Czeslaw Petelski
+241,241,Guy Maddin
+242,242,Antonio Mercero
+243,243,Leonard Nimoy
+244,244,George Ogilvie
+245,245,Leonard Schrader
+246,246,Michel Deville
+247,247,Bruno Gaburro
+248,248,Benoît Jacquot
+249,249,Christian Vincent
+250,250,Marek Koterski
+251,251,Michele Placido
+252,252,Eric L. Schlagman
+253,253,Kevin Tenney
+254,254,Stephen Shin
+255,255,Axel Corti
+256,256,Armondo Linus Acosta
+257,257,Paolo TavianiVittorio Taviani
+258,258,Matti Ijäs
+259,259,Helmut Dziuba
+260,260,Indra Kumar
+261,261,Joanna Priestley
+262,262,Julie Cypher
+263,263,James Allen
+264,264,Colin SouthJohn Tatoulis
+265,265,Paul Leder
+266,266,Mike Figgis
+267,267,Jag Mundhra
+268,268,Zoran Tadic
+269,269,Esmayeel Shroff
+270,270,Francesco Rosi
+271,271,Gregory Dark
+272,272,Fred Gallo
+273,273,Philippe Sisbane

@@ -5,7 +5,7 @@ from tqdm import tqdm
 # Librerías para tratamiento de datos
 
 import pandas as pd
-import geopandas as gpd
+import pickle
 import numpy as np
 import re
 
@@ -59,11 +59,10 @@ dbeaver_user = os.getenv("dbeaver_user")
 rapiapi_key = os.getenv("rapiapi_key")
 ruta_descarga = os.getenv("ruta_descarga")
 
-
 def consulta_peliculas(paginas):
     url = "https://moviesdatabase.p.rapidapi.com/titles"
     headers = {
-        "x-rapidapi-key": "d273e2c881mshda69fec8ceb12f0p1af332jsn39723f7f0eb4",
+        "x-rapidapi-key": rapiapi_key,
         "x-rapidapi-host": "moviesdatabase.p.rapidapi.com"
     }
     
@@ -86,7 +85,7 @@ def consulta_peliculas(paginas):
                     
                     try:
                         response = requests.get(url, headers=headers, params=querystring)
-                        response.raise_for_status() 
+                        response.raise_for_status()  # Raise an exception for HTTP errors
                         res = response.json()
                         
                         peliculas = res.get("results", [])
@@ -96,10 +95,7 @@ def consulta_peliculas(paginas):
                             tipo = pelicula.get("titleType", {}).get("text", None)
                             nombre = pelicula.get("titleText", {}).get("text", None)
                             ano = pelicula.get("releaseYear", {}).get("year", None)
-                            try:
-                                mes = pelicula.get("releaseDate", {}).get("month", None)
-                            except:
-                                mes = "ND"
+                            mes = pelicula.get("releaseDate", {}).get("month", "ND")
                             
                             lista_completa.append((id, nombre, tipo, ano, mes, genero))
 
@@ -110,6 +106,74 @@ def consulta_peliculas(paginas):
                     sleep(2)
     
     return lista_completa
+
+
+def scrap_imdb(lista_ids):
+
+    # Configurar el driver y abrir la URL
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--incognito")
+    driver = webdriver.Chrome(options=chrome_options)
+    
+    url_inicio = f"https://www.imdb.com/"
+    driver.get(url_inicio)
+    
+    # Esperar a que aparezca el banner de cookies y aceptar cookies
+    time.sleep(3)
+    try:
+        driver.find_element("css selector", "#__next > div > div > div.sc-jrcTuL.bPmWiM > div > button.icb-btn.sc-bcXHqe.sc-dkrFOg.sc-iBYQkv.dcvrLS.ddtuHe.dRCGjd").click()
+        print("Cookies aceptadas")
+    except Exception as e:
+        print(f"Error al aceptar cookies: {e}")
+
+    lista_sopas = []
+    time.sleep(2)
+    
+    # Iterar sobre las páginas
+    for id in tqdm(lista_ids):
+        # Navegar a la página de resultados
+        pagina_url = f"https://www.imdb.com/title/{id}"
+        driver.get(pagina_url)
+        #print(f"Scraping página {id}")
+
+        # Obtener el código fuente de la página y analizarlo con BeautifulSoup
+        time.sleep(2)
+
+        try:
+            source = driver.page_source
+            sopa = BeautifulSoup(source, "html.parser")
+            #print(f"Sopa creada {id}")
+            time.sleep(1)
+
+            calificacion = sopa.select_one('#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-9a2a0028-3.bwWOiy > div.sc-3a4309f8-0.jJkxPn.sc-70a366cc-1.kUfGfN > div > div:nth-child(1) > a > span > div > div.sc-d541859f-0.hNIoIx > div.sc-d541859f-2.kxphVf > span.sc-d541859f-1.imUuxf')
+            direccion = sopa.select_one('#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-9a2a0028-4.eZLbYw > div.sc-9a2a0028-6.iMFgzR > div.sc-9a2a0028-10.dFokEJ > section > div.sc-70a366cc-3.iwmAOx > div > ul > li:nth-child(1) > div')
+            guionista = sopa.select_one('#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-9a2a0028-4.eZLbYw > div.sc-9a2a0028-6.iMFgzR > div.sc-9a2a0028-10.dFokEJ > section > div.sc-70a366cc-3.iwmAOx > div > ul > li:nth-child(2) > div')
+            argumento = sopa.select_one('#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-9a2a0028-4.eZLbYw > div.sc-9a2a0028-6.iMFgzR > div.sc-9a2a0028-10.dFokEJ > section > p > span.sc-3ac15c8d-1.gkeSEi')        
+            duracion = sopa.select_one('#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-9a2a0028-3.bwWOiy > div.sc-70a366cc-0.bxYZmb > ul > li:nth-child(2)')
+
+            calificacion = calificacion.text.strip()
+            direccion = direccion.text.strip()
+            guionista = guionista.text.strip()
+            argumento = argumento.text.strip()
+            duracion = duracion.text.strip()
+
+            # Almacenar resultados de la página
+            lista_sopas.append((id, calificacion, direccion, guionista, argumento, duracion))
+
+            with open('datos/tuplas_sopas.pkl', 'wb') as f:
+                pickle.dump(lista_sopas, f)
+        
+        except:
+            pass
+    
+    # Cerrar el navegador
+    time.sleep(2)
+    driver.quit()
+    
+    # Imprimir confirmación
+    print("Scraping finalizado")
+    
+    return lista_sopas
 
 
 def dbeaver_crear_db(database_name):
